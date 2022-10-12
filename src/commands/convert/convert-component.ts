@@ -2,7 +2,9 @@ import chalk = require("chalk");
 import { execSync } from "node:child_process";
 
 type Prompts = {
-  src: string;
+  remote: boolean;
+  scope?: string | boolean;
+  src: string | boolean;
   dest: string;
   impression: string;
 };

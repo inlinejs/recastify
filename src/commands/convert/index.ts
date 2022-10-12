@@ -7,20 +7,50 @@ export default class Convert extends Command {
   static examples = ["<%= config.bin %> <%= command.id %>"];
 
   public async run(): Promise<void> {
-    const sourceComponent = await inquirer.prompt([
+    const isRemote = await inquirer.prompt([
       {
-        name: "source",
-        message: "What is the name of the original component? Ex: outline-card",
-        type: "input",
-        validate: function (input: string) {
-          if (input && typeof input === "string") {
-            return true;
-          }
-
-          return false;
-        },
+        name: "remote",
+        message: "Is this a remote component?",
+        type: "confirm",
+        default: true,
       },
     ]);
+
+    if (isRemote) {
+      // @todo: Handle error messaging.
+      const sourceScope = await inquirer.prompt([
+        {
+          name: "scope",
+          message: "What is the scope of the original component?",
+          type: "input",
+          default: "@phase2",
+          validate: function (input: string) {
+            if (input && typeof input === "string") {
+              return true;
+            }
+
+            return false;
+          },
+        },
+      ]);
+
+      // @todo: Handle error messaging.
+      const sourceComponent = await inquirer.prompt([
+        {
+          name: "source",
+          message:
+            "What is the name of the original component? Ex: outline-card",
+          type: "input",
+          validate: function (input: string) {
+            if (input && typeof input === "string") {
+              return true;
+            }
+
+            return false;
+          },
+        },
+      ]);
+    }
 
     const destinationComponent = await inquirer.prompt([
       {
@@ -55,7 +85,9 @@ export default class Convert extends Command {
 
     // const {args, flags} = await this.parse(Init)
     const prompts = {
-      src: sourceComponent.name,
+      remote: isRemote.name,
+      scope: sourceScope ? sourceScope.name : false,
+      src: sourceComponent ? sourceComponent.name : false,
       dest: destinationComponent.name,
       impression: impression.name,
     };
