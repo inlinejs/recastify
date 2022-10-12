@@ -8,8 +8,9 @@ type Prompts = {
   dest: string;
   impression: string;
 };
+
 /**
- * Creates story from custom element json file
+ * Convert a component from one framework to another.
  *
  * @param {string} prompts - prompts: Object of the values from the prompt questions;
  * @returns NULL
