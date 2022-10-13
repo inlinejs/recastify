@@ -1,7 +1,7 @@
-oclif-hello-world
+recastify
 =================
 
-oclif example Hello World CLI
+Web Component transfiguration tool. Convert Web Components in a multitude of formats to other formats.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
@@ -20,7 +20,7 @@ $ npm install -g recastify
 $ recastify COMMAND
 running command...
 $ recastify (--version)
-recastify/0.0.1 darwin-x64 node-v18.7.0
+recastify/0.0.2 darwin-x64 node-v18.7.0
 $ recastify --help [COMMAND]
 USAGE
   $ recastify COMMAND
@@ -76,7 +76,7 @@ EXAMPLES
   $ recastify outline
 ```
 
-_See code: [dist/commands/outline.ts](https://github.com/ininejs/recastify/blob/v0.0.1/dist/commands/outline.ts)_
+_See code: [dist/commands/outline.ts](https://github.com/ininejs/recastify/blob/v0.0.2/dist/commands/outline.ts)_
 
 ## `recastify plugins`
 
