@@ -2,8 +2,9 @@
 /* eslint-disable indent */
 import { Command } from "@oclif/core";
 import * as inquirer from "inquirer";
-import { convertComponent } from "../core/convert-component";
-export default class Convert extends Command {
+import { convertComponent } from "../core/outline-to-inline";
+
+export default class Outline extends Command {
   static description = "Converts an Outline component to InlineJS.";
   static examples = ["<%= config.bin %> <%= command.id %>"];
 

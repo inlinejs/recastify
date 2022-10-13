@@ -1,7 +1,7 @@
 {
-  "name": "@inlinejs/iswap",
+  "name": "transfigure",
   "version": "0.0.2",
-  "description": "Outline to Inline Web Component Conversion Tool",
+  "description": "Web Component transfiguration tool. Convert Web Components in a multitude of formats to other formats.",
   "author": {
     "name": "Jake Strawn",
     "url": "https://github.com/himerus"
@@ -9,12 +9,12 @@
   "bin": {
     "convert": "./bin/run"
   },
-  "homepage": "https://github.com/inlinejs/iswap",
+  "homepage": "https://github.com/inlinejs/transfigure",
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ininejs/iswap.git"
+    "url": "https://github.com/ininejs/transfigure.git"
   },
   "files": [
     "/bin",
@@ -68,16 +68,17 @@
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
     "prepack": "yarn build && oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "test": "",
     "version": "oclif readme && git add README.md",
     "package": "npm publish"
   },
   "engines": {
     "node": ">=12.0.0"
   },
-  "bugs": "https://github.com/inlinejs/iswap/issues",
+  "bugs": "https://github.com/inlinejs/transfigure/issues",
   "keywords": [
     "oclif",
+    "transfigure",
     "outline",
     "inline",
     "inlinejs",
