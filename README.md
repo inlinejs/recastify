@@ -16,79 +16,37 @@ oclif example Hello World CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g iswap
-$ convert COMMAND
+$ npm install -g @inlinejs/iswap
+$ inline COMMAND
 running command...
-$ convert (--version)
-iswap/0.0.0 darwin-x64 node-v18.7.0
-$ convert --help [COMMAND]
+$ inline (--version)
+@inlinejs/iswap/0.0.2 darwin-x64 node-v18.8.0
+$ inline --help [COMMAND]
 USAGE
-  $ convert COMMAND
+  $ inline COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`convert hello PERSON`](#convert-hello-person)
-* [`convert hello world`](#convert-hello-world)
-* [`convert help [COMMAND]`](#convert-help-command)
-* [`convert plugins`](#convert-plugins)
-* [`convert plugins:install PLUGIN...`](#convert-pluginsinstall-plugin)
-* [`convert plugins:inspect PLUGIN...`](#convert-pluginsinspect-plugin)
-* [`convert plugins:install PLUGIN...`](#convert-pluginsinstall-plugin-1)
-* [`convert plugins:link PLUGIN`](#convert-pluginslink-plugin)
-* [`convert plugins:uninstall PLUGIN...`](#convert-pluginsuninstall-plugin)
-* [`convert plugins:uninstall PLUGIN...`](#convert-pluginsuninstall-plugin-1)
-* [`convert plugins:uninstall PLUGIN...`](#convert-pluginsuninstall-plugin-2)
-* [`convert plugins update`](#convert-plugins-update)
+* [`inline help [COMMAND]`](#inline-help-command)
+* [`inline plugins`](#inline-plugins)
+* [`inline plugins:install PLUGIN...`](#inline-pluginsinstall-plugin)
+* [`inline plugins:inspect PLUGIN...`](#inline-pluginsinspect-plugin)
+* [`inline plugins:install PLUGIN...`](#inline-pluginsinstall-plugin-1)
+* [`inline plugins:link PLUGIN`](#inline-pluginslink-plugin)
+* [`inline plugins:uninstall PLUGIN...`](#inline-pluginsuninstall-plugin)
+* [`inline plugins:uninstall PLUGIN...`](#inline-pluginsuninstall-plugin-1)
+* [`inline plugins:uninstall PLUGIN...`](#inline-pluginsuninstall-plugin-2)
+* [`inline plugins update`](#inline-plugins-update)
 
-## `convert hello PERSON`
+## `inline help [COMMAND]`
 
-Say hello
+Display help for inline.
 
 ```
 USAGE
-  $ convert hello [PERSON] -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/inlinejs/iswap/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `convert hello world`
-
-Say hello world
-
-```
-USAGE
-  $ convert hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ convert hello world
-  hello world! (./src/commands/hello/world.ts)
-```
-
-## `convert help [COMMAND]`
-
-Display help for convert.
-
-```
-USAGE
-  $ convert help [COMMAND] [-n]
+  $ inline help [COMMAND] [-n]
 
 ARGUMENTS
   COMMAND  Command to show help for.
@@ -97,18 +55,18 @@ FLAGS
   -n, --nested-commands  Include all nested commands in the output.
 
 DESCRIPTION
-  Display help for convert.
+  Display help for inline.
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.14/src/commands/help.ts)_
 
-## `convert plugins`
+## `inline plugins`
 
 List installed plugins.
 
 ```
 USAGE
-  $ convert plugins [--core]
+  $ inline plugins [--core]
 
 FLAGS
   --core  Show core plugins.
@@ -117,18 +75,18 @@ DESCRIPTION
   List installed plugins.
 
 EXAMPLES
-  $ convert plugins
+  $ inline plugins
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.1/src/commands/plugins/index.ts)_
 
-## `convert plugins:install PLUGIN...`
+## `inline plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ convert plugins:install PLUGIN...
+  $ inline plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -150,23 +108,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ convert plugins add
+  $ inline plugins add
 
 EXAMPLES
-  $ convert plugins:install myplugin 
+  $ inline plugins:install myplugin 
 
-  $ convert plugins:install https://github.com/someuser/someplugin
+  $ inline plugins:install https://github.com/someuser/someplugin
 
-  $ convert plugins:install someuser/someplugin
+  $ inline plugins:install someuser/someplugin
 ```
 
-## `convert plugins:inspect PLUGIN...`
+## `inline plugins:inspect PLUGIN...`
 
 Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ convert plugins:inspect PLUGIN...
+  $ inline plugins:inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN  [default: .] Plugin to inspect.
@@ -179,16 +137,16 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ convert plugins:inspect myplugin
+  $ inline plugins:inspect myplugin
 ```
 
-## `convert plugins:install PLUGIN...`
+## `inline plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ convert plugins:install PLUGIN...
+  $ inline plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -210,23 +168,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ convert plugins add
+  $ inline plugins add
 
 EXAMPLES
-  $ convert plugins:install myplugin 
+  $ inline plugins:install myplugin 
 
-  $ convert plugins:install https://github.com/someuser/someplugin
+  $ inline plugins:install https://github.com/someuser/someplugin
 
-  $ convert plugins:install someuser/someplugin
+  $ inline plugins:install someuser/someplugin
 ```
 
-## `convert plugins:link PLUGIN`
+## `inline plugins:link PLUGIN`
 
 Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ convert plugins:link PLUGIN
+  $ inline plugins:link PLUGIN
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -244,16 +202,16 @@ DESCRIPTION
   command will override the user-installed or core plugin implementation. This is useful for development work.
 
 EXAMPLES
-  $ convert plugins:link myplugin
+  $ inline plugins:link myplugin
 ```
 
-## `convert plugins:uninstall PLUGIN...`
+## `inline plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ convert plugins:uninstall PLUGIN...
+  $ inline plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -266,17 +224,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ convert plugins unlink
-  $ convert plugins remove
+  $ inline plugins unlink
+  $ inline plugins remove
 ```
 
-## `convert plugins:uninstall PLUGIN...`
+## `inline plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ convert plugins:uninstall PLUGIN...
+  $ inline plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -289,17 +247,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ convert plugins unlink
-  $ convert plugins remove
+  $ inline plugins unlink
+  $ inline plugins remove
 ```
 
-## `convert plugins:uninstall PLUGIN...`
+## `inline plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ convert plugins:uninstall PLUGIN...
+  $ inline plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -312,17 +270,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ convert plugins unlink
-  $ convert plugins remove
+  $ inline plugins unlink
+  $ inline plugins remove
 ```
 
-## `convert plugins update`
+## `inline plugins update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ convert plugins update [-h] [-v]
+  $ inline plugins update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.
