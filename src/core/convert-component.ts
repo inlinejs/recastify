@@ -3,10 +3,12 @@ import { execSync } from "node:child_process";
 
 type Prompts = {
   remote: boolean;
-  scope?: string | boolean;
+  scope: string | boolean;
   src: string | boolean;
-  dest: string;
-  impression: string;
+  package: string;
+  dest?: string;
+  path?: string;
+  impression?: string;
 };
 
 /**
