@@ -1,5 +1,5 @@
 {
-  "name": "transfigure",
+  "name": "recastify",
   "version": "0.0.1",
   "description": "Web Component transfiguration tool. Convert Web Components in a multitude of formats to other formats.",
   "author": {
@@ -9,12 +9,15 @@
   "bin": {
     "convert": "./bin/run"
   },
-  "homepage": "https://github.com/inlinejs/transfigure",
+  "homepage": "https://github.com/inlinejs/recastify",
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ininejs/transfigure.git"
+    "url": "https://github.com/ininejs/recastify.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "files": [
     "/bin",
@@ -75,10 +78,10 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "bugs": "https://github.com/inlinejs/transfigure/issues",
+  "bugs": "https://github.com/inlinejs/recastify/issues",
   "keywords": [
     "oclif",
-    "transfigure",
+    "recastify",
     "outline",
     "inline",
     "inlinejs",
