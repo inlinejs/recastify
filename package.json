@@ -1,6 +1,6 @@
 {
   "name": "recastify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Web Component transfiguration tool. Convert Web Components in a multitude of formats to other formats.",
   "author": {
     "name": "Jake Strawn",
@@ -51,8 +51,8 @@
     "typescript": "^4.8.4"
   },
   "oclif": {
-    "bin": "inline",
-    "dirname": "inline",
+    "bin": "recastify",
+    "dirname": "recastify",
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",

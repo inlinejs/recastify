@@ -17,37 +17,37 @@ oclif example Hello World CLI
 <!-- usage -->
 ```sh-session
 $ npm install -g recastify
-$ inline COMMAND
+$ recastify COMMAND
 running command...
-$ inline (--version)
+$ recastify (--version)
 recastify/0.0.1 darwin-x64 node-v18.7.0
-$ inline --help [COMMAND]
+$ recastify --help [COMMAND]
 USAGE
-  $ inline COMMAND
+  $ recastify COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`inline help [COMMAND]`](#inline-help-command)
-* [`inline outline`](#inline-outline)
-* [`inline plugins`](#inline-plugins)
-* [`inline plugins:install PLUGIN...`](#inline-pluginsinstall-plugin)
-* [`inline plugins:inspect PLUGIN...`](#inline-pluginsinspect-plugin)
-* [`inline plugins:install PLUGIN...`](#inline-pluginsinstall-plugin-1)
-* [`inline plugins:link PLUGIN`](#inline-pluginslink-plugin)
-* [`inline plugins:uninstall PLUGIN...`](#inline-pluginsuninstall-plugin)
-* [`inline plugins:uninstall PLUGIN...`](#inline-pluginsuninstall-plugin-1)
-* [`inline plugins:uninstall PLUGIN...`](#inline-pluginsuninstall-plugin-2)
-* [`inline plugins update`](#inline-plugins-update)
+* [`recastify help [COMMAND]`](#recastify-help-command)
+* [`recastify outline`](#recastify-outline)
+* [`recastify plugins`](#recastify-plugins)
+* [`recastify plugins:install PLUGIN...`](#recastify-pluginsinstall-plugin)
+* [`recastify plugins:inspect PLUGIN...`](#recastify-pluginsinspect-plugin)
+* [`recastify plugins:install PLUGIN...`](#recastify-pluginsinstall-plugin-1)
+* [`recastify plugins:link PLUGIN`](#recastify-pluginslink-plugin)
+* [`recastify plugins:uninstall PLUGIN...`](#recastify-pluginsuninstall-plugin)
+* [`recastify plugins:uninstall PLUGIN...`](#recastify-pluginsuninstall-plugin-1)
+* [`recastify plugins:uninstall PLUGIN...`](#recastify-pluginsuninstall-plugin-2)
+* [`recastify plugins update`](#recastify-plugins-update)
 
-## `inline help [COMMAND]`
+## `recastify help [COMMAND]`
 
-Display help for inline.
+Display help for recastify.
 
 ```
 USAGE
-  $ inline help [COMMAND] [-n]
+  $ recastify help [COMMAND] [-n]
 
 ARGUMENTS
   COMMAND  Command to show help for.
@@ -56,35 +56,35 @@ FLAGS
   -n, --nested-commands  Include all nested commands in the output.
 
 DESCRIPTION
-  Display help for inline.
+  Display help for recastify.
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.14/src/commands/help.ts)_
 
-## `inline outline`
+## `recastify outline`
 
 Converts an Outline component to InlineJS.
 
 ```
 USAGE
-  $ inline outline
+  $ recastify outline
 
 DESCRIPTION
   Converts an Outline component to InlineJS.
 
 EXAMPLES
-  $ inline outline
+  $ recastify outline
 ```
 
 _See code: [dist/commands/outline.ts](https://github.com/ininejs/recastify/blob/v0.0.1/dist/commands/outline.ts)_
 
-## `inline plugins`
+## `recastify plugins`
 
 List installed plugins.
 
 ```
 USAGE
-  $ inline plugins [--core]
+  $ recastify plugins [--core]
 
 FLAGS
   --core  Show core plugins.
@@ -93,18 +93,18 @@ DESCRIPTION
   List installed plugins.
 
 EXAMPLES
-  $ inline plugins
+  $ recastify plugins
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.1/src/commands/plugins/index.ts)_
 
-## `inline plugins:install PLUGIN...`
+## `recastify plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ inline plugins:install PLUGIN...
+  $ recastify plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -126,23 +126,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ inline plugins add
+  $ recastify plugins add
 
 EXAMPLES
-  $ inline plugins:install myplugin 
+  $ recastify plugins:install myplugin 
 
-  $ inline plugins:install https://github.com/someuser/someplugin
+  $ recastify plugins:install https://github.com/someuser/someplugin
 
-  $ inline plugins:install someuser/someplugin
+  $ recastify plugins:install someuser/someplugin
 ```
 
-## `inline plugins:inspect PLUGIN...`
+## `recastify plugins:inspect PLUGIN...`
 
 Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ inline plugins:inspect PLUGIN...
+  $ recastify plugins:inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN  [default: .] Plugin to inspect.
@@ -155,16 +155,16 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ inline plugins:inspect myplugin
+  $ recastify plugins:inspect myplugin
 ```
 
-## `inline plugins:install PLUGIN...`
+## `recastify plugins:install PLUGIN...`
 
 Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ inline plugins:install PLUGIN...
+  $ recastify plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -186,23 +186,23 @@ DESCRIPTION
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
-  $ inline plugins add
+  $ recastify plugins add
 
 EXAMPLES
-  $ inline plugins:install myplugin 
+  $ recastify plugins:install myplugin 
 
-  $ inline plugins:install https://github.com/someuser/someplugin
+  $ recastify plugins:install https://github.com/someuser/someplugin
 
-  $ inline plugins:install someuser/someplugin
+  $ recastify plugins:install someuser/someplugin
 ```
 
-## `inline plugins:link PLUGIN`
+## `recastify plugins:link PLUGIN`
 
 Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ inline plugins:link PLUGIN
+  $ recastify plugins:link PLUGIN
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -220,16 +220,16 @@ DESCRIPTION
   command will override the user-installed or core plugin implementation. This is useful for development work.
 
 EXAMPLES
-  $ inline plugins:link myplugin
+  $ recastify plugins:link myplugin
 ```
 
-## `inline plugins:uninstall PLUGIN...`
+## `recastify plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ inline plugins:uninstall PLUGIN...
+  $ recastify plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -242,17 +242,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ inline plugins unlink
-  $ inline plugins remove
+  $ recastify plugins unlink
+  $ recastify plugins remove
 ```
 
-## `inline plugins:uninstall PLUGIN...`
+## `recastify plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ inline plugins:uninstall PLUGIN...
+  $ recastify plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -265,17 +265,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ inline plugins unlink
-  $ inline plugins remove
+  $ recastify plugins unlink
+  $ recastify plugins remove
 ```
 
-## `inline plugins:uninstall PLUGIN...`
+## `recastify plugins:uninstall PLUGIN...`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ inline plugins:uninstall PLUGIN...
+  $ recastify plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -288,17 +288,17 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ inline plugins unlink
-  $ inline plugins remove
+  $ recastify plugins unlink
+  $ recastify plugins remove
 ```
 
-## `inline plugins update`
+## `recastify plugins update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ inline plugins update [-h] [-v]
+  $ recastify plugins update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.
