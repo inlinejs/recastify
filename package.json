@@ -1,6 +1,6 @@
 {
   "name": "recastify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Web Component transfiguration tool. Convert Web Components in a multitude of formats to other formats.",
   "author": {
     "name": "Jake Strawn",
