@@ -5,8 +5,8 @@ type Prompts = {
   remote: boolean;
   scope: string | boolean;
   src: string | boolean;
-  package: string;
-  dest?: string;
+  package: string | boolean;
+  dest: string;
   path?: string;
   impression?: string;
 };
