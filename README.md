@@ -20,7 +20,7 @@ $ npm install -g recastify
 $ recastify COMMAND
 running command...
 $ recastify (--version)
-recastify/0.0.2 darwin-x64 node-v18.7.0
+recastify/0.0.3 darwin-x64 node-v18.7.0
 $ recastify --help [COMMAND]
 USAGE
   $ recastify COMMAND
@@ -76,7 +76,7 @@ EXAMPLES
   $ recastify outline
 ```
 
-_See code: [dist/commands/outline.ts](https://github.com/ininejs/recastify/blob/v0.0.2/dist/commands/outline.ts)_
+_See code: [dist/commands/outline.ts](https://github.com/ininejs/recastify/blob/v0.0.3/dist/commands/outline.ts)_
 
 ## `recastify plugins`
 
