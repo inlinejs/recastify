@@ -68,36 +68,43 @@ export default class Outline extends Command {
           ])
         : false;
 
-    const destinationComponent = await inquirer.prompt([
-      {
-        name: "destination",
-        message: "What is the name of the new component? Ex: inline-card",
-        type: "input",
-        validate: function (input: string) {
-          if (input && typeof input === "string") {
-            return true;
-          }
+    const destinationComponent =
+      isRemote.remote === false
+        ? await inquirer.prompt([
+            {
+              name: "destination",
+              message: "What is the name of the new component?",
+              type: "input",
+              default: "inline-card",
+              validate: function (input: string) {
+                if (input && typeof input === "string") {
+                  return true;
+                }
 
-          return false;
-        },
-      },
-    ]);
+                return false;
+              },
+            },
+          ])
+        : false;
 
-    const destinationPath = await inquirer.prompt([
-      {
-        name: "destination",
-        message:
-          "Where should the copied component live? Ex: ./packages/inline-card",
-        type: "input",
-        validate: function (input: string) {
-          if (input && typeof input === "string") {
-            return true;
-          }
+    const destinationPath =
+      isRemote.remote === false
+        ? await inquirer.prompt([
+            {
+              name: "destination",
+              message:
+                "Where should the copied component live? Ex: ./packages/inline-card",
+              type: "input",
+              validate: function (input: string) {
+                if (input && typeof input === "string") {
+                  return true;
+                }
 
-          return false;
-        },
-      },
-    ]);
+                return false;
+              },
+            },
+          ])
+        : false;
 
     const impression = await inquirer.prompt([
       {
@@ -118,8 +125,8 @@ export default class Outline extends Command {
     // const {args, flags} = await this.parse(Init)
     const prompts = {
       remote: isRemote.name,
-      scope: sourceScope ? sourceScope.name : false,
-      src: sourceComponent ? sourceComponent.name : false,
+      scope: sourceScope ? sourceScope.scope : false,
+      src: sourceComponent ? sourceComponent.source : false,
       package: remoteComponent ? remoteComponent.name : false,
       dest: destinationComponent.name,
       path: destinationPath.name,
