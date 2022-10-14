@@ -12,7 +12,7 @@ export default class Outline extends Command {
     const isRemote = await inquirer.prompt([
       {
         name: "remote",
-        message: "Is this a remote component?",
+        message: "Is this a remotely hosted component?",
         type: "confirm",
         default: true,
       },
