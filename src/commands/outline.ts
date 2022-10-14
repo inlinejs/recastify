@@ -61,7 +61,7 @@ export default class Outline extends Command {
         ? await inquirer.prompt([
             {
               name: "remoteLocation",
-              message: `Is this component located at ${sourceScope.name}/${sourceComponent.name}?`,
+              message: `Is this component located at ${sourceScope.scope}/${sourceComponent.source}?`,
               type: "confirm",
               default: true,
             },
